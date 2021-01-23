@@ -1,0 +1,151 @@
+main.home {
+    h1 {
+        font-size: 0;
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+        position: relative;
+        &:hover {
+            h2 {
+                transform: translateX(0);
+            }
+            i {
+                opacity: 0;
+                transition: all ease-out .5s;
+            }
+        }
+        h2 {
+            transform: translateX(-100vw);
+            transition: all ease-in .5s;
+            position: absolute;
+        }
+    }
+    section {
+        display: block;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    section.portafolio {
+        height: 100vh;
+        background-color: #fc0;
+    }
+    section.perfil {
+        height: 50vh;
+        background-color: #000;
+    }
+    section.refer {
+        height: 50vh;
+        background-color: #777;
+    }
+    section.contact {
+        height: 100vh;
+        background-color: rgb(197, 172, 70);
+    }
+    .interior {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            font-size: 5rem;
+            -o-animation: bounce 3s infinite ease-in-out;
+            -ms-animation: bounce 3s infinite ease-in-out;
+            animation: bounce 3s infinite ease-in-out;
+        }
+        @-webkit-keyframes bounce {
+            0% {
+                transform: translateY(-5px)
+            }
+            50% {
+                transform: translateY(10px)
+            }
+            100% {
+                transform: translateY(-5px)
+            }
+        }
+        @keyframes bounce {
+            0% {
+                transform: translateY(-5px)
+            }
+            50% {
+                transform: translateY(10px)
+            }
+            100% {
+                transform: translateY(-5px)
+            }
+        }
+    }
+    @media (max-width:768px) {
+        a {
+            text-decoration: none;
+            position: relative;
+            h2 {
+                transform: translateX(0);
+                -o-animation: bounce 3s infinite ease-in-out;
+                -ms-animation: bounce 3s infinite ease-in-out;
+                animation: bounce 3s infinite ease-in-out;
+            }
+            @-webkit-keyframes bounce {
+                0% {
+                    transform: translateY(-5px)
+                }
+                50% {
+                    transform: translateY(10px)
+                }
+                100% {
+                    transform: translateY(-5px)
+                }
+            }
+            @keyframes bounce {
+                0% {
+                    transform: translateY(-5px)
+                }
+                50% {
+                    transform: translateY(10px)
+                }
+                100% {
+                    transform: translateY(-5px)
+                }
+            }
+            i {
+                display: none;
+            }
+        }
+        section.portafolio {
+            height: 70vh;
+            background-color: #fc0;
+        }
+        section.perfil {
+            height: 35vh;
+            background-color: #000;
+        }
+        section.refer {
+            height: 35vh;
+            background-color: #777;
+        }
+        section.contact {
+            height: 30vh;
+            background-color: rgb(197, 172, 70);
+        }
+    }
+    @media (max-width:568px) {
+        section.portafolio {
+            height: 25vh;
+            background-color: #fc0;
+        }
+        section.contact {
+            height: 25vh;
+            background-color: rgb(197, 172, 70);
+        }
+        section.perfil {
+            height: 25vh;
+            background-color: #000;
+        }
+        section.refer {
+            height: 25vh;
+            background-color: #777;
+        }
+    }
+}

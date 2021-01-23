@@ -1,0 +1,23 @@
+.modal {
+    .modal-header {
+        background: $fondoRojo;
+        img {
+            display: block;
+        }
+    }
+    .close {
+        position: absolute;
+        right: 5px;
+        top: 0;
+        cursor: pointer;
+    }
+    @media(max-width:568px) {
+        .modal-header {
+            background: $fondoRojo;
+            img {
+                max-width: 200px;
+                margin: 0px auto;
+            }
+        }
+    }
+}

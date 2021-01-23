@@ -1,0 +1,16 @@
+header {
+    position: fixed;
+    z-index: 2;
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 220px;
+        img {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+        }
+    }
+    @media(max-width: 768px) {}
+}

@@ -1,0 +1,11 @@
+@import 'partials/_variables.scss';
+%btn-davi {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 30px;
+    min-width: 200px;
+    color: #fff;
+    display: block;
+    background: $rojo;
+    margin: 15px auto;
+}
