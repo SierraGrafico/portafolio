@@ -35,12 +35,21 @@ main.home {
     }
     section.portafolio {
         height: 100vh;
-        background-color: #fc0;
+        background:url('../images/me-min.jpg');
+        background-size: cover;
+        background-position: center;
+        &:hover{
+         h2{
+            transform: translateY(0);
+         }
+        }
         h2{
             position: absolute;
-            bottom: 5%;
+            transform: translateY(50vh);
+            transition: all .7s;
             right: 0;
             left: 0;
+            bottom: 4%;
             text-align: center;
             font-size: calc(2.2rem + .9vw);
             z-index: 2;
