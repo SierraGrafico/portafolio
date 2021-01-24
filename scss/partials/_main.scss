@@ -6,20 +6,26 @@ main.home {
     a {
         text-decoration: none;
         position: relative;
-        &:hover {
+        .interior{
             h2 {
-                transform: translateX(0);
-            }
-            i {
-                opacity: 0;
-                transition: all ease-out .5s;
+                transform: translateX(-100vw);
+                transition: all ease-in .5s;
+                position: absolute;
             }
         }
-        h2 {
-            transform: translateX(-100vw);
-            transition: all ease-in .5s;
-            position: absolute;
+        &:hover {
+            .interior{
+                h2 {
+                    transform: translateX(0);
+                }
+                i {
+                    opacity: 0;
+                    transition: all ease-out .5s;
+                }
+            }
+            
         }
+        
     }
     section {
         display: block;
@@ -30,6 +36,16 @@ main.home {
     section.portafolio {
         height: 100vh;
         background-color: #fc0;
+        h2{
+            position: absolute;
+            bottom: 5%;
+            right: 0;
+            left: 0;
+            text-align: center;
+            font-size: calc(2.2rem + .9vw);
+            z-index: 2;
+            
+        }
     }
     section.perfil {
         height: 50vh;
@@ -81,37 +97,40 @@ main.home {
         a {
             text-decoration: none;
             position: relative;
-            h2 {
-                transform: translateX(0);
-                -o-animation: bounce 3s infinite ease-in-out;
-                -ms-animation: bounce 3s infinite ease-in-out;
-                animation: bounce 3s infinite ease-in-out;
+            .interior{
+                h2 {
+                    transform: translateX(0);
+                    -o-animation: bounce 3s infinite ease-in-out;
+                    -ms-animation: bounce 3s infinite ease-in-out;
+                    animation: bounce 3s infinite ease-in-out;
+                }
+                @-webkit-keyframes bounce {
+                    0% {
+                        transform: translateY(-5px)
+                    }
+                    50% {
+                        transform: translateY(10px)
+                    }
+                    100% {
+                        transform: translateY(-5px)
+                    }
+                }
+                @keyframes bounce {
+                    0% {
+                        transform: translateY(-5px)
+                    }
+                    50% {
+                        transform: translateY(10px)
+                    }
+                    100% {
+                        transform: translateY(-5px)
+                    }
+                }
+                i {
+                    display: none;
+                }
             }
-            @-webkit-keyframes bounce {
-                0% {
-                    transform: translateY(-5px)
-                }
-                50% {
-                    transform: translateY(10px)
-                }
-                100% {
-                    transform: translateY(-5px)
-                }
-            }
-            @keyframes bounce {
-                0% {
-                    transform: translateY(-5px)
-                }
-                50% {
-                    transform: translateY(10px)
-                }
-                100% {
-                    transform: translateY(-5px)
-                }
-            }
-            i {
-                display: none;
-            }
+            
         }
         section.portafolio {
             height: 70vh;
@@ -132,20 +151,21 @@ main.home {
     }
     @media (max-width:568px) {
         section.portafolio {
-            height: 25vh;
+            height: 75vh;
             background-color: #fc0;
         }
-        section.contact {
-            height: 25vh;
-            background-color: rgb(197, 172, 70);
-        }
+       
         section.perfil {
             height: 25vh;
             background-color: #000;
         }
         section.refer {
-            height: 25vh;
+            height: 50vh;
             background-color: #777;
+        }
+        section.contact {
+            height: 50vh;
+            background-color: rgb(197, 172, 70);
         }
     }
 }
