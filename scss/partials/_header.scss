@@ -14,23 +14,50 @@ header {
             height: auto;
         }
     }
-    .menu{
-        position: absolute;
-        top: 0;
-        right: 0;
-        cursor: pointer;
-      
-        span{
-            font-size: 16px;
-            font-weight: 400;
-        }
-    }
     @media(max-width: 568px) {
         .logo {
-           
             width: 120px;
-           
-        
         }
     }
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 12;
+    cursor: pointer;
+    span {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.full-menu {
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    position: fixed;
+    background-color: #FCBD21;
+    transform: scaleX(0);
+    transition: all ease-in .5s;
+    .marca {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 11;
+        height: auto;
+        width: 20vw;
+    }
+    .logo-menu {
+        max-width: 150px;
+        margin: auto;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.activar {
+    transform: scaleX(1);
 }
