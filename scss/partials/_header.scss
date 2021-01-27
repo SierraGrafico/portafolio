@@ -7,7 +7,7 @@ header {
         position: absolute;
         top: 0;
         left: 0;
-        width: 220px;
+        width: 150px;
         img {
             max-width: 250px;
             width: 100%;
@@ -16,7 +16,7 @@ header {
     }
     @media(max-width: 568px) {
         .logo {
-            width: 120px;
+            width: 100px;
         }
     }
 }
@@ -47,13 +47,59 @@ header {
         bottom: 0;
         z-index: 11;
         height: auto;
-        width: 20vw;
+        width: 10vw;
     }
     .logo-menu {
         max-width: 150px;
-        margin: auto;
+        margin: 25px auto 0;
         img {
             max-width: 100%;
+        }
+    }
+    .links-page {
+        font-family: 'PT Mono', monospace;
+        padding: 30px 10px;
+        text-align: center;
+        li {
+            list-style: none;
+            margin-bottom: 1rem;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            &:hover {
+                &::before {
+                    content: '< ';
+                    font-weight: bold;
+                    color: white;
+                }
+                &::after {
+                    content: '/> ';
+                    font-weight: bold;
+                    color: white;
+                }
+            }
+        }
+    }
+    .redes {
+        text-align: center;
+        i {
+            font-size: 5vw;
+            color: #6f5004;
+            transition: all .4s;
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+    @media(max-width: 568px) {
+        .marca {
+            width: 40vw;
+        }
+        .redes {
+            i {
+                font-size: 15vw;
+            }
         }
     }
 }
