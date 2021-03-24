@@ -1,0 +1,18 @@
+section.cabecera{
+    background: url('../images/fondopagina.jpg');
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 5px;
+
+    i{
+        color: $amarillo;
+        font-size: 30px;
+    }
+    h1{
+        color: #fff;
+        margin: 0 0 0 15px;
+    }
+}

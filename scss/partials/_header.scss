@@ -20,7 +20,12 @@ header {
         }
     }
 }
-
+.redesMenu{
+    display: none;
+}
+.verRedes{
+    cursor: pointer;
+}
 .menu {
     position: absolute;
     top: 0;
@@ -33,7 +38,7 @@ header {
     }
 }
 
-.full-menu {
+.fullMenu {
     width: 100vw;
     height: 100vh;
     z-index: 10;
@@ -49,14 +54,14 @@ header {
         height: auto;
         width: 10vw;
     }
-    .logo-menu {
+    .logoMenu {
         max-width: 150px;
         margin: 25px auto 0;
         img {
             max-width: 100%;
         }
     }
-    .links-page {
+    .linksPage {
         font-family: 'PT Mono', monospace;
         padding: 30px 10px;
         text-align: center;

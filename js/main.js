@@ -1,7 +1,10 @@
 // menu
 $(document).ready(function() {
     $(".menu").click(function() {
-        $(".full-menu").toggleClass("activar");
+        $(".fullMenu").toggleClass("activar");
+    });
+    $(".verRedes").click(function() {
+        $(".redesMenu").toggle();
     });
 });
 
