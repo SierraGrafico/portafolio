@@ -20,21 +20,19 @@ header {
         }
     }
 }
-.redesMenu{
-    display: none;
-}
-.verRedes{
-    cursor: pointer;
-}
-.menu {
+
+.menuBtn {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 12;
     cursor: pointer;
-    span {
+    background: $amarillo;
+    padding: 3px 5px;
+    border-radius:  0 0 5px 5px;
+    .menuBtn__txt {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 700;
     }
 }
 
@@ -46,7 +44,7 @@ header {
     background-color: #FCBD21;
     transform: scaleX(0);
     transition: all ease-in .5s;
-    .marca {
+    .fullMenu__marca {
         position: absolute;
         left: 0;
         bottom: 0;
@@ -54,14 +52,14 @@ header {
         height: auto;
         width: 10vw;
     }
-    .logoMenu {
+    .fullMenu__logoMenu {
         max-width: 150px;
         margin: 25px auto 0;
         img {
             max-width: 100%;
         }
     }
-    .linksPage {
+    .fullMenu__linksPage {
         font-family: 'PT Mono', monospace;
         padding: 30px 10px;
         text-align: center;
@@ -86,25 +84,10 @@ header {
             }
         }
     }
-    .redes {
-        text-align: center;
-        i {
-            font-size: 5vw;
-            color: #6f5004;
-            transition: all .4s;
-            &:hover {
-                color: #000;
-            }
-        }
-    }
+    
     @media(max-width: 568px) {
-        .marca {
+        .fullMenu__marca {
             width: 40vw;
-        }
-        .redes {
-            i {
-                font-size: 15vw;
-            }
         }
     }
 }

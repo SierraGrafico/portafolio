@@ -1,11 +1,10 @@
+
+
 // menu
 $(document).ready(function() {
-    $(".menu").click(function() {
-        $(".fullMenu").toggleClass("activar");
-    });
-    $(".verRedes").click(function() {
-        $(".redesMenu").toggle();
-    });
+    $('.menuBtn').click(function() {
+      $('.fullMenu').toggleClass('activar');
+    }); 
 });
 
 function stateMenu() {
@@ -16,3 +15,8 @@ function stateMenu() {
         x.innerHTML = "Menu";
     }
 }
+//edad
+var birth = 1986;
+var actual = new Date().getFullYear();
+var edad = actual - birth;
+document.getElementById('edad').innerHTML = edad;

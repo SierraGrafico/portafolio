@@ -1,0 +1,29 @@
+body.perfil{
+    .presentacion{
+        border: 2px solid $amarillo;
+        position: relative;
+        box-sizing: border-box;
+        padding: 20px 10px;
+        display: flex;
+        margin: auto;
+        p{
+            font-size: 18px;
+        }
+    }
+    .habilidades{
+        padding: 15vh 10px;
+        h3{
+            text-align: center;
+            color: $title;
+        }
+    }
+    .skills{
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0;
+        .skills__program{
+            flex-grow: 1;
+            margin: 0 5px;
+        }
+    }
+}

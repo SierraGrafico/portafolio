@@ -1,4 +1,4 @@
-section.cabecera{
+section.cabecera {
     background: url('../images/fondopagina.jpg');
     display: flex;
     flex-direction: row;
@@ -7,11 +7,13 @@ section.cabecera{
     align-items: center;
     padding: 50px 5px;
 
-    i{
-        color: $amarillo;
-        font-size: 30px;
+    .cabecera__iconoCabecera {
+        i {
+            color: $amarillo;
+            font-size: 30px;
+        }
     }
-    h1{
+    .cabecera__titulo {
         color: #fff;
         margin: 0 0 0 15px;
     }
