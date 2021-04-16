@@ -20,15 +20,18 @@ html,
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: 300;
+
     h1,
     h2,
     h3 {
-        font-family: 'PT Mono', monospace;
+        @include titulo;
         font-weight: normal;
         font-style: normal;
         font-weight: 900;
     }
+
     @media (min-width:1024px) {}
+
     @media(max-width: 768px) {
         .col-md-8 {
             -ms-flex: 0 0 100%;
@@ -36,6 +39,7 @@ body {
             max-width: 100%;
         }
     }
+
     @media (max-width:568px) {
         #ui-datepicker-div {
             max-width: 250px;
@@ -48,7 +52,8 @@ main {
         font-size: 0;
         margin: 0;
     }
-    p{
+
+    p {
         color: $textos;
         font-weight: 500;
     }
@@ -62,49 +67,61 @@ main {
     box-shadow: 0 0 0 .2rem rgba(221, 20, 29, .25);
 }
 
-.btn{
-    background:$amarillo;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: row;
-    padding: 5px 15px;
-    border: none;
-    position: absolute;
-    bottom: -20px;
-    right: 10px;
-    .btn__icono{
-        margin-right: 7px;
-        i{
-            color: #000;
-        }
-    }
-    .btn__textBtn{
-       font-weight: 400;
-       color: #000;
-    }
-}
-.dark{
-    background:#000;
-   
-    .btn__icono{
-        i{
+// .btn {
+//     background: $amarillo;
+//     border-radius: 25px;
+//     display: flex;
+//     flex-direction: row;
+//     padding: 5px 15px;
+//     border: none;
+//     position: absolute;
+//     bottom: -20px;
+//     right: 10px;
+//     left: 10px;
+//     margin: auto;
+
+//     .btn__icono {
+//         margin-right: 7px;
+
+//         i {
+//             color: #000;
+//         }
+//     }
+
+//     .btn__textBtn {
+//         font-weight: 400;
+//         color: #000;
+//     }
+// }
+
+.dark {
+    background: #000;
+
+    .btn__icono {
+        i {
             color: $amarillo;
         }
     }
-    .btn__textBtn{
-      
-       color:$amarillo;}
+
+    .btn__textBtn {
+
+        color: $amarillo;
     }
+}
+
 aside {
     position: absolute;
     right: 10px;
     top: 25%;
+
     img {
         max-width: 13px;
         width: 100%;
     }
+
     @media(max-width: 768px) {
         top: 10%;
+
         img {
             max-width: 8px;
             width: 100%;

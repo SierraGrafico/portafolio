@@ -1,6 +1,6 @@
 header {
     position: fixed;
-    z-index: 2;
+    z-index: 5;
     width: 100%;
     box-sizing: border-box;
     .logo {
@@ -30,6 +30,7 @@ header {
     background: $amarillo;
     padding: 3px 5px;
     border-radius:  0 0 5px 5px;
+    box-shadow: -3px 3px 3px rgba($color: #000000, $alpha: 0.2);
     .menuBtn__txt {
         font-size: 16px;
         font-weight: 700;
@@ -43,7 +44,7 @@ header {
     position: fixed;
     background-color: #FCBD21;
     transform: scaleX(0);
-    transition: all ease-in .5s;
+    transition: all ease-in .2s;
     .fullMenu__marca {
         position: absolute;
         left: 0;
@@ -51,6 +52,7 @@ header {
         z-index: 11;
         height: auto;
         width: 10vw;
+        display: none;
     }
     .fullMenu__logoMenu {
         max-width: 150px;
@@ -60,15 +62,17 @@ header {
         }
     }
     .fullMenu__linksPage {
-        font-family: 'PT Mono', monospace;
+        @include titulo;
         padding: 30px 10px;
         text-align: center;
+        margin-top: 50px;
         li {
             list-style: none;
             margin-bottom: 1rem;
             a {
                 text-decoration: none;
-                color: black;
+                color: #9c7000;
+                font-size: 30px;
             }
             &:hover {
                 &::before {

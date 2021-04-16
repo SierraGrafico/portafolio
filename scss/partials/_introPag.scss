@@ -1,7 +1,10 @@
 section.introPag{
     text-align: center;
-    padding: 50px 10px;
+    padding: 70px 10px 25px;
     .introPag__lema{
         color: $title;
+    }
+    @media (max-width:768px) {
+        padding: 40px 10px 25px;
     }
 }

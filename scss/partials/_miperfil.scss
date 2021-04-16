@@ -5,25 +5,85 @@ body.perfil{
         box-sizing: border-box;
         padding: 20px 10px;
         display: flex;
-        margin: auto;
+        margin: 150px auto 0;
         p{
             font-size: 18px;
         }
+        .foto{
+            background:url('../images/me-over.gif') ;
+            background-position: center;
+border-radius: 50%;
+height: 150px;
+width: 150px;
+position: absolute;
+background-size: cover;
+border: 5px solid $amarillo;
+left: 0;
+right: 0;
+margin: auto;
+top: -135px;
+        }
     }
+
+
     .habilidades{
+        background:url('../images/fondopagina.jpg') ;
+        background-attachment: fixed;
+        background-position:center ;
+        background-size: cover;
         padding: 15vh 10px;
+        .progress-bar{
+            background-image: none;
+        }
         h3{
             text-align: center;
-            color: $title;
+            color: $amarillo;
         }
+        p{
+            text-align: center;
+            color: #fff;
+            margin-top: 40px;
+            font-size: 24px;
+        }
+        ul{
+            text-align: center;
+            h4{
+                color:$amarillo;
+            }
+            li{
+                color: #fff;
+                list-style:none;
+            }
+        }
+    }
+    .experiencia{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
     .skills{
         display: flex;
         flex-direction: row;
-        margin: 20px 0;
+      
         .skills__program{
             flex-grow: 1;
+            width: 100%;
             margin: 0 5px;
+            h4{
+                margin: 0;
+                margin-top: 10px;
+                color: #fff;
+            }
         }
+    }
+
+    @media (max-width:600px) {
+        .skills{
+            flex-direction: column;
+        } 
+        .experiencia{
+            flex-direction: column;
+            
+        } 
     }
 }

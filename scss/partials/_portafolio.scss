@@ -1,0 +1,176 @@
+.portafolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+
+    li {
+        list-style: none;
+        margin: 40px 20px;
+
+        img {
+            height: 140px;
+        }
+    }
+
+    @media (max-width:600px) {
+        li {
+            margin: 20px 10px;
+        }
+    }
+}
+
+.pieza {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+
+    .link,
+    .descripcion {
+        font-size: 0;
+    }
+
+    .titulo {
+        font-weight: 700;
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 10px;
+        line-height: initial;
+        position: relative;
+
+        &::before {
+            content: '< ';
+            font-weight: bold;
+            color: $amarillo;
+
+        }
+
+        &::after {
+            content: ' /> ';
+            font-weight: bold;
+            color: $amarillo;
+
+        }
+
+    }
+
+    .verPieza {
+        @extend .formaBtn;
+        background: transparent;
+        border: 1px solid #444;
+        margin-top: 10px;
+        transition: all .2s;
+
+        &:hover {
+            background: $amarillo;
+        }
+    }
+
+    .categ {
+        background: #000;
+        padding: 3px 10px;
+        color: $amarillo;
+        z-index: 1;
+        top: 55px;
+        left: -10px;
+        position: absolute;
+        font-size: 12px;
+    }
+}
+
+.verPiezas {
+    background: $amarillo;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: all .2s;
+    z-index: 3;
+
+    &:before {
+        content: '<HTML/>';
+        position: absolute;
+        font-size: 20vw;
+        left: 0;
+        bottom: 0;
+        transform: rotate(-40deg);
+        z-index: -1;
+        opacity: .1;
+    }
+
+    .icon {
+        text-align: center;
+        margin-bottom: 0;
+
+        i {
+            color: #000;
+            font-size: 70px;
+        }
+    }
+
+    #piezaFull {
+        display: block;
+        margin: auto;
+        max-width: 550px;
+        width: 100%;
+        height: auto;
+    }
+
+    #namePieza {
+        font-weight: 700;
+        @include titulo;
+        margin: 0px auto 25px;
+        text-align: center;
+    }
+
+    #descipcionPieza {
+        font-size: 20px;
+        text-align: justify;
+        box-sizing: border-box;
+        padding-right: 50px;
+    }
+
+    #linkPieza {
+        @extend .formaBtn;
+        color: #000;
+        display: block;
+        position: relative;
+        border: 1px solid #000;
+        text-align: center;
+        max-width: 200px;
+        margin: 25px auto 0;
+        text-decoration: none;
+    }
+
+    @media (max-width:600px) {
+        #namePieza {
+            text-align: center;
+        }
+
+        #descipcionPieza {
+            font-size: 16px;
+            text-align: center;
+            padding-right: initial;
+        }
+    }
+}
+
+.activar {
+    transform: scaleY(1);
+
+    .volver {
+        @extend .dark;
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 20px;
+        display: block;
+        margin: 25px auto;
+        border: 0;
+    }
+}

@@ -1,0 +1,10 @@
+@mixin titulo {
+    font-family: 'PT Mono', monospace;
+}
+
+.formaBtn{
+    border: 0;
+    border-radius: 25px;
+    text-align: center;
+    padding: 5px 25px;
+}
