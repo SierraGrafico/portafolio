@@ -8,7 +8,7 @@ $(document).ready(function() {
 });
 
 function stateMenu() {
-    var x = document.querySelector(".menuTxt");
+    var x = document.querySelector(".menuBtn__txt");
     if (x.innerHTML === "Menu") {
         x.innerHTML = "Cerrar";
     } else {

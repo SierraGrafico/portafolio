@@ -1,5 +1,6 @@
 .modal {
-   text-align: center;
+    text-align: center;
+
     .close {
         position: absolute;
         right: 5px;
@@ -12,7 +13,13 @@
         color: #000;
         font-weight: 900;
         border: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
     }
+
     .modal-header {
-    border-bottom: transparent}
+        border-bottom: transparent
+    }
 }

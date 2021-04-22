@@ -1,0 +1,17 @@
+body.gracias{
+    background: url('../images/fondopagina.jpg');
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+    position: relative;
+    h2{
+        color: #fff;
+        font-size: 65px;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+    }
+}
